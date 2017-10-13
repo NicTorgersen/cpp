@@ -36,6 +36,7 @@ Account Bank::getAccount(string name)
 {
     for (vector<Account>::iterator iter = accounts.begin(); iter != accounts.end(); ++iter)
     {
+        cout << iter->getNumber() << endl;
         if (iter->getName() == name)
         {
             return *iter;

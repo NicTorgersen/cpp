@@ -41,3 +41,8 @@ int Account::getBalance()
 {
     return balance;
 }
+
+int Account::getNumber()
+{
+    return number;
+}
