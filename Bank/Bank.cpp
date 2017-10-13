@@ -24,22 +24,22 @@ vector<Account> Bank::getAccounts()
 
 Account Bank::getAccount(int number)
 {
-    for (vector<Account>::iterator iter = accounts.begin(); iter != accounts.end(); ++iter)
+    for (vector<Account>::iterator account = accounts.begin(); account != accounts.end(); ++account)
     {
-        if (iter->getNumber() == number)
+        if (account->getNumber() == number)
         {
-            return *iter;
+            return *account;
         }
     }
 }
 Account Bank::getAccount(string name)
 {
-    for (vector<Account>::iterator iter = accounts.begin(); iter != accounts.end(); ++iter)
+    for (vector<Account>::iterator account = accounts.begin(); account != accounts.end(); ++account)
     {
-        cout << iter->getNumber() << endl;
-        if (iter->getName() == name)
+        cout << account->getNumber() << endl;
+        if (account->getName() == name)
         {
-            return *iter;
+            return *account;
         }
     }
 }
