@@ -19,10 +19,15 @@ string generate_name (int seed, int length)
 
     for (int i = 0; i < length; i++)
     {
-        name += ++c;
+        name += c++;
     }
 
     return name;
+}
+
+void fileOperations (string filename)
+{
+
 }
 
 int main()
@@ -33,7 +38,7 @@ int main()
     for (int i = 0; i < 5; i++)
     {
         string name = generate_name(i, 3);
-        Account acc(i, name, 0);
+        Account acc(i+1, name, 0, false);
         accs.push_back(acc);
         cout << "Added " << acc.getName() << " to ledger." << endl;
     }
@@ -53,13 +58,24 @@ int main()
         switch(in)
         {
             case 'h': { // help
-                cout << "Type 'a' to add money to account number.\nType 'r' to read from a file.\nType 'c' to close." << endl;
+                cout << "Type 'l' to list all accounts.\nType 'a' to add money to account number.\nType 'r' to read from a file.\nType 'c' to close." << endl;
+                break;
+            }
+
+            case 'l': { // list
+                b.listAccounts();
                 break;
             }
 
             case 'a': { // add money
+                cout << "Enter account number\n" << "> ";
+                int accountNumber;
+                cin >> accountNumber;
+
+                cout << "Enter amount\n" << "> ";
                 int amount;
                 cin >> amount;
+
                 break;
             }
 
@@ -84,6 +100,7 @@ int main()
                 running = false;
                 break;
             }
+
         }
     }
 

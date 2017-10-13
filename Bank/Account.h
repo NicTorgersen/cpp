@@ -5,6 +5,7 @@
 class Account
 {
     public:
+        Account(int, std::string, int, bool);
         Account(int, std::string, int);
         Account(std::string, int);
         Account(std::string);
@@ -25,6 +26,7 @@ class Account
         std::string name;
         int number;
         int balance;
+        bool isCredit;
 };
 
 #endif // ACCOUNT_H

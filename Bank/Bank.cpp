@@ -17,6 +17,19 @@ void Bank::addAccount(Account account)
     accounts.push_back(account);
 }
 
+void Bank::listAccounts()
+{
+    vector<Account> accs = getAccounts();
+    for (int i = 0; i < accs.size(); i++)
+    {
+        cout << "--------------" << endl;
+        cout << "Account name:\t\t" << accs[i].getName() << endl;
+        cout << "Account number:\t\t" << accs[i].getNumber() << endl;
+        cout << "Account balance:\t" << accs[i].getBalance() << endl;
+        cout << "--------------" << endl;
+    }
+}
+
 vector<Account> Bank::getAccounts()
 {
     return accounts;

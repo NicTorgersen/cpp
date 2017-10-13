@@ -8,6 +8,8 @@ class Bank
     public:
         Bank(std::vector<Account>);
 
+        void listAccounts();
+
         void addAccount(Account);
 
         std::vector<Account> getAccounts();

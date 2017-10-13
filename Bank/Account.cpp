@@ -3,16 +3,23 @@
 
 using namespace std;
 
-Account::Account(int num, string acName, int balance)
+Account::Account(int num, string acName, int acBalance, bool acIsCredit)
 {
-    num = num;
+    number = num;
     name = acName;
-    balance = balance;
+    balance = acBalance;
+    isCredit = acIsCredit;
 }
-Account::Account(string acName, int balance)
+Account::Account(int num, string acName, int acBalance)
+{
+    number = num;
+    name = acName;
+    balance = acBalance;
+}
+Account::Account(string acName, int acBalance)
 {
     name = acName;
-    balance = balance;
+    balance = acBalance;
 }
 Account::Account(string acName)
 {
