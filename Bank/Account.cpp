@@ -16,6 +16,12 @@ Account::Account(int num, string acName, int acBalance)
     name = acName;
     balance = acBalance;
 }
+Account::Account(string acName, int acBalance, bool acIsCredit)
+{
+    name = acName;
+    balance = acBalance;
+    isCredit = acIsCredit;
+}
 Account::Account(string acName, int acBalance)
 {
     name = acName;

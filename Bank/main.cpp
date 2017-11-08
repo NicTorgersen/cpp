@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 #include "Bank.h"
 #include "Account.h"
 
@@ -27,6 +28,10 @@ string generate_name (int seed, int length)
 
 void fileOperations (string filename)
 {
+/*    ofstream records;
+    records.open(filename);
+    cin >> records;*/
+
 
 }
 

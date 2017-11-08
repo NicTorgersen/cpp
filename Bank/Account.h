@@ -7,6 +7,7 @@ class Account
     public:
         Account(int, std::string, int, bool);
         Account(int, std::string, int);
+        Account(std::string, int, bool);
         Account(std::string, int);
         Account(std::string);
 
